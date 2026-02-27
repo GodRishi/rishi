@@ -14,7 +14,8 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <span className="inline-block py-1 px-3 rounded-full bg-[var(--color-accent)]/10 text-[var(--color-accent)] text-xs md:text-sm font-semibold mb-6 border border-[var(--color-accent)]/20 backdrop-blur-sm">
@@ -24,7 +25,8 @@ export default function Hero() {
 
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
           className="text-5xl md:text-8xl font-bold tracking-tight mb-6"
         >
@@ -36,7 +38,8 @@ export default function Hero() {
 
         <motion.p
           initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 1, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
           className="text-base md:text-xl text-[var(--color-text-secondary)] max-w-2xl mx-auto mb-10 leading-relaxed"
         >
@@ -47,7 +50,8 @@ export default function Hero() {
 
         <motion.div
           initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 1, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
