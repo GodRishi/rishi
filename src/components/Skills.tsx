@@ -11,7 +11,7 @@ export default function Skills() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.6 }}
           className="mb-20 md:mb-28 text-center md:text-left"
         >
@@ -29,7 +29,7 @@ export default function Skills() {
               key={category.category}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false, amount: 0.2 }}
               transition={{ duration: 0.5, delay: catIndex * 0.1 }}
               whileHover={{ y: -5 }}
               className="p-6 rounded-2xl bg-[var(--color-bg-primary)] border border-[var(--color-text-secondary)]/10 shadow-sm hover:shadow-[0_10px_30px_-10px_var(--color-accent-glow)] hover:border-[var(--color-accent)]/30 transition-all"
@@ -52,7 +52,7 @@ export default function Skills() {
                       <motion.div
                         initial={{ width: 0 }}
                         whileInView={{ width: `${skill.level}%` }}
-                        viewport={{ once: true }}
+                        viewport={{ once: false, amount: 0.2 }}
                         transition={{ duration: 1.5, delay: 0.2 + (skillIndex * 0.1), ease: "easeOut" }}
                         className="h-full bg-[var(--color-accent)] rounded-full relative overflow-hidden"
                       >
