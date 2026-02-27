@@ -10,7 +10,7 @@ export default function Projects() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.6 }}
           className="mb-16 md:mb-24"
         >
@@ -28,7 +28,7 @@ export default function Projects() {
               key={project.id}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: false, amount: 0.2 }}
               transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
             >
               <TiltCard className="group h-full bg-[var(--color-bg-primary)] border border-[var(--color-text-secondary)]/10 rounded-2xl overflow-hidden hover:border-[var(--color-accent)]/50 transition-colors duration-300 shadow-sm hover:shadow-[0_10px_30px_-10px_var(--color-accent-glow)]">
