@@ -15,6 +15,10 @@ export default function CustomCursor() {
   const ringY = useSpring(mouseY, ringSpringConfig);
 
   useEffect(() => {
+    // Only run on devices that support hover (i.e., not touch devices)
+    const mediaQuery = window.matchMedia("(hover: hover) and (pointer: fine)");
+    if (!mediaQuery.matches) return;
+
     const updateMousePosition = (e: MouseEvent) => {
       mouseX.set(e.clientX);
       mouseY.set(e.clientY);

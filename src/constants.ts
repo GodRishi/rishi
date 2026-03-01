@@ -36,6 +36,15 @@ export const PROJECTS = [
     liveLink: 'https://digitaldreamcreation.vercel.app',
     githubLink: '',
   },
+  {
+    id: 2,
+    title: 'Mehta Urban Developers',
+    description: 'A modern, responsive website for a leading real estate development firm, showcasing their portfolio of urban projects and services.',
+    tech: ['TypeScript', 'HTML5', 'CSS', 'AI Assisted'],
+    image: 'https://i.ibb.co/NnLTzBHj/image-2026-02-28-094539423.png',
+    liveLink: 'https://demowebsite001.vercel.app/#',
+    githubLink: '',
+  },
 ];
 
 export const SKILLS = [

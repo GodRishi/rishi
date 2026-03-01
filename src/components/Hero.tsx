@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden pt-28 md:pt-20"
+      className="min-h-[100svh] flex items-center justify-center relative overflow-hidden pt-28 md:pt-20 pb-24"
     >
       {/* Spotlight Effect */}
       <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_50%_50%,rgba(var(--color-accent-rgb),0.15),transparent_50%)]" />

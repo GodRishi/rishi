@@ -39,6 +39,12 @@ body {
   width: 10px;
 }
 
+@media (max-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 2px;
+  }
+}
+
 ::-webkit-scrollbar-track {
   background: var(--color-bg-primary);
 }

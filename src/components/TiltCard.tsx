@@ -1,4 +1,4 @@
-import { useRef, useState, MouseEvent, ReactNode } from 'react';
+import { useRef, useState, MouseEvent, ReactNode, useEffect } from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'motion/react';
 
 interface TiltCardProps {
@@ -8,6 +8,18 @@ interface TiltCardProps {
 
 export default function TiltCard({ children, className = "" }: TiltCardProps) {
   const ref = useRef<HTMLDivElement>(null);
+  const [isHoverable, setIsHoverable] = useState(false);
+
+  useEffect(() => {
+    // Check if device supports hover (desktop/mouse)
+    const checkHover = () => {
+      setIsHoverable(window.matchMedia('(hover: hover)').matches);
+    };
+    
+    checkHover();
+    window.addEventListener('resize', checkHover);
+    return () => window.removeEventListener('resize', checkHover);
+  }, []);
 
   const x = useMotionValue(0);
   const y = useMotionValue(0);
@@ -19,7 +31,7 @@ export default function TiltCard({ children, className = "" }: TiltCardProps) {
   const rotateY = useTransform(mouseX, [-0.5, 0.5], ["-15deg", "15deg"]);
 
   const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
-    if (!ref.current) return;
+    if (!ref.current || !isHoverable) return;
 
     const rect = ref.current.getBoundingClientRect();
 
@@ -40,6 +52,14 @@ export default function TiltCard({ children, className = "" }: TiltCardProps) {
     x.set(0);
     y.set(0);
   };
+
+  if (!isHoverable) {
+    return (
+      <div className={`relative ${className}`}>
+        {children}
+      </div>
+    );
+  }
 
   return (
     <motion.div

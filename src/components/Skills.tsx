@@ -50,23 +50,13 @@ export default function Skills() {
                     </div>
                     <div className="h-2 w-full bg-[var(--color-text-secondary)]/10 rounded-full overflow-hidden">
                       <motion.div
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${skill.level}%` }}
+                        initial={{ scaleX: 0 }}
+                        whileInView={{ scaleX: skill.level / 100 }}
                         viewport={{ once: false, amount: 0.2 }}
-                        transition={{ duration: 1.5, delay: 0.2 + (skillIndex * 0.1), ease: "easeOut" }}
-                        className="h-full bg-[var(--color-accent)] rounded-full relative overflow-hidden"
-                      >
-                        <motion.div 
-                          animate={{ x: ["-100%", "200%"] }}
-                          transition={{ 
-                            duration: 1.5, 
-                            repeat: Infinity, 
-                            repeatDelay: 1,
-                            ease: "linear" 
-                          }}
-                          className="absolute top-0 bottom-0 w-1/2 bg-gradient-to-r from-transparent via-white/40 to-transparent skew-x-[-20deg]" 
-                        />
-                      </motion.div>
+                        transition={{ duration: 1, delay: 0.1 + (skillIndex * 0.05), ease: "easeOut" }}
+                        style={{ originX: 0 }}
+                        className="h-full bg-[var(--color-accent)] rounded-full relative"
+                      />
                     </div>
                   </div>
                 ))}

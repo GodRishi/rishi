@@ -134,10 +134,12 @@ export default function Contact() {
               <input
                 type="text"
                 id="name"
+                name="name"
+                autoComplete="name"
                 required
                 value={formState.name}
                 onChange={(e) => setFormState({ ...formState, name: e.target.value })}
-                className="w-full px-4 py-3 rounded-lg bg-[var(--color-bg-primary)] border border-[var(--color-text-secondary)]/20 focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] outline-none transition-all"
+                className="w-full px-4 py-3 rounded-lg bg-[var(--color-bg-primary)] border border-[var(--color-text-secondary)]/20 focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] outline-none transition-all text-base"
                 placeholder="John Doe"
               />
             </div>
@@ -148,10 +150,13 @@ export default function Contact() {
               <input
                 type="email"
                 id="email"
+                name="email"
+                autoComplete="email"
+                inputMode="email"
                 required
                 value={formState.email}
                 onChange={(e) => setFormState({ ...formState, email: e.target.value })}
-                className="w-full px-4 py-3 rounded-lg bg-[var(--color-bg-primary)] border border-[var(--color-text-secondary)]/20 focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] outline-none transition-all"
+                className="w-full px-4 py-3 rounded-lg bg-[var(--color-bg-primary)] border border-[var(--color-text-secondary)]/20 focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] outline-none transition-all text-base"
                 placeholder="john@example.com"
               />
             </div>
@@ -161,11 +166,12 @@ export default function Contact() {
               </label>
               <textarea
                 id="message"
+                name="message"
                 required
                 rows={4}
                 value={formState.message}
                 onChange={(e) => setFormState({ ...formState, message: e.target.value })}
-                className="w-full px-4 py-3 rounded-lg bg-[var(--color-bg-primary)] border border-[var(--color-text-secondary)]/20 focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] outline-none transition-all resize-none"
+                className="w-full px-4 py-3 rounded-lg bg-[var(--color-bg-primary)] border border-[var(--color-text-secondary)]/20 focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] outline-none transition-all resize-none text-base"
                 placeholder="Tell me about your project..."
               />
             </div>

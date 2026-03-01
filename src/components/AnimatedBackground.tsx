@@ -18,15 +18,16 @@ export default function AnimatedBackground() {
       {/* Subtle animated gradient orb */}
       <motion.div
         animate={{
-          scale: [1, 1.2, 1],
-          opacity: [0.1, 0.2, 0.1],
+          scale: [1, 1.1, 1],
+          opacity: [0.1, 0.15, 0.1],
         }}
         transition={{
-          duration: 10,
+          duration: 8,
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[var(--color-accent)] rounded-full blur-[120px] opacity-10"
+        style={{ willChange: "transform, opacity" }}
+        className="absolute top-1/4 left-1/4 w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-[var(--color-accent)] rounded-full blur-[60px] md:blur-[100px] opacity-10"
       />
     </div>
   );
