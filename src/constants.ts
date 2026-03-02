@@ -41,7 +41,7 @@ export const PROJECTS = [
     title: 'Mehta Urban Developers',
     description: 'A modern, responsive website for a leading real estate development firm, showcasing their portfolio of urban projects and services.',
     tech: ['TypeScript', 'HTML5', 'CSS', 'AI Assisted'],
-    image: 'https://i.ibb.co/NnLTzBHj/image-2026-02-28-094539423.png',
+    image: 'https://i.postimg.cc/g0r2N3ds/image-2026-03-02-093945440.png',
     liveLink: 'https://demowebsite001.vercel.app/#',
     githubLink: '',
   },
