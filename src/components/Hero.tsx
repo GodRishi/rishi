@@ -43,9 +43,8 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
           className="text-base md:text-xl text-[var(--color-text-secondary)] max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          I transform simple ideas into visually powerful digital experiences.
-          Leveraging the raw power of TypeScript and HTML to build bold,
-          interactive, and performant websites.
+          I build custom, lightning-fast websites that help businesses look professional,
+          stand out from the competition, and turn visitors into paying customers.
         </motion.p>
 
         <motion.div
